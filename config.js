@@ -4,5 +4,5 @@
    endpoint: 'https://brief-bot.ваш-логин.workers.dev'
 */
 window.BRIEF_CONFIG = {
-  endpoint: ''
+  endpoint: 'https://brief-bot.vgrozdev86.workers.dev'
 };
