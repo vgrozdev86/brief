@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Бриф на сайт — Виктор Гроздев</title>
+  <meta name="description" content="Пошаговый бриф: расскажите о проекте, и я подготовлю предложение.">
+  <!-- Страница закрыта от поисковиков: бриф даётся только по личной ссылке -->
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="progress" aria-hidden="true"><div class="progress__bar" id="progressBar"></div></div>
+
+  <header class="top">
+    <a class="top__logo" href="./" aria-label="Бриф — на главный экран">
+      <span class="top__mark">VG</span>
+      <span class="top__name">Бриф</span>
+    </a>
+    <a class="pill pill--small" href="https://t.me/vgrozdev" target="_blank" rel="noopener">Связаться</a>
+  </header>
+
+  <main id="app">
+    <!-- Вступление -->
+    <section class="screen screen--intro" id="intro">
+      <div class="intro">
+        <div class="intro__text">
+          <p class="eyebrow">Бриф на разработку сайта</p>
+          <h1 class="display">Расскажите о проекте — я подготовлю предложение</h1>
+          <p class="lead">Семь коротких этапов, по три–пять вопросов. Займёт около 15–20 минут. Можно закрыть страницу и вернуться позже — ответы сохранятся на вашем устройстве.</p>
+          <div class="intro__actions">
+            <button class="btn" type="button" id="startBtn">Начать</button>
+            <span class="intro__meta">01 / 07 · без регистрации</span>
+          </div>
+        </div>
+        <figure class="intro__photo">
+          <img src="assets/new_avatar.jpg" alt="Виктор Гроздев" data-fallback="ВГ" width="1224" height="1632">
+          <figcaption>
+            <strong>Виктор Гроздев</strong>
+            <span>UX/UI-дизайнер, разработчик сайтов</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Этапы -->
+    <section class="screen screen--stage" id="stage" hidden>
+      <div class="stage">
+        <aside class="stage__side" id="stageSide"></aside>
+        <div class="stage__body" id="stageBody"></div>
+      </div>
+    </section>
+
+    <!-- Финал -->
+    <section class="screen screen--final" id="final" hidden>
+      <div class="final">
+        <div class="final__text">
+          <p class="testnote" id="finalNote" hidden>Тестовый режим: приёмник не подключён, ответы никуда не отправлены, файл с ними скачан на этот компьютер. После подключения Telegram эта плашка исчезнет.</p>
+          <h2 class="display display--xl" id="finalTitle">Спасибо!</h2>
+          <p class="lead" id="finalLead">Я получил ваш бриф и скоро с вами свяжусь.</p>
+          <div class="next" id="finalNext"></div>
+          <div class="final__actions">
+            <a class="btn" id="finalTg" href="https://t.me/vgrozdev" target="_blank" rel="noopener">Написать в Telegram</a>
+            <button class="btn btn--ghost" type="button" id="finalDownload">Скачать копию ответов</button>
+          </div>
+        </div>
+        <figure class="final__photo">
+          <img src="assets/new_avatar.jpg" alt="Виктор Гроздев" data-fallback="ВГ" width="1224" height="1632">
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <!-- Навигация этапов -->
+  <nav class="nav" id="nav" aria-label="Навигация по этапам" hidden>
+    <div class="nav__inner">
+      <button class="btn btn--ghost btn--nav" type="button" id="backBtn">Назад</button>
+      <ol class="dots" id="dots"></ol>
+      <button class="btn btn--nav" type="button" id="nextBtn">Далее</button>
+    </div>
+  </nav>
+
+  <footer class="foot" id="foot">
+    <div class="foot__inner">
+      <div class="foot__col">
+        <p class="foot__title">Гроздев Виктор Владимирович</p>
+        <p>Самозанятый (плательщик налога на профессиональный доход)<br>ИНН 643921119007</p>
+      </div>
+      <div class="foot__col">
+        <p class="foot__title">Документы</p>
+        <p><a href="politika.html">Политика обработки персональных данных</a><br>
+           <a href="soglasie.html">Согласие на обработку персональных данных</a></p>
+      </div>
+      <div class="foot__col">
+        <p class="foot__title">Связь</p>
+        <p><a href="https://t.me/vgrozdev" target="_blank" rel="noopener">Telegram</a> ·
+           <a href="https://wa.me/79626280167" target="_blank" rel="noopener">WhatsApp</a> ·
+           <a href="https://vk.me/vgrozdev" target="_blank" rel="noopener">ВКонтакте</a><br>
+           <a href="mailto:viktorgrozdev.design@yandex.ru">viktorgrozdev.design@yandex.ru</a></p>
+      </div>
+      <a class="pill foot__cta" href="https://t.me/vgrozdev" target="_blank" rel="noopener">Написать мне</a>
+    </div>
+    <p class="foot__copy">© 2026 Виктор Гроздев</p>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <script src="typo.js"></script>
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
